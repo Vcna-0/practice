@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #141419;
+}
+
+label {
+  margin-bottom: 20px;
+}
+
+/* ========== SWITCH 1 ==========*/
+
+.switch1 {
+  margin-top: 5px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch1 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider1 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #4b4661;
+  background: linear-gradient(180deg, #253069 0%, #412861 100%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider1::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider1 {
+  border-color: #913c94;
+}
+
+input:checked + .slider1::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* ========== SWITCH 2 ==========*/
+
+.switch2 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch2 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider2 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #334d63;
+  background: linear-gradient(180deg, #020024 0%, #0e0e53 78%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider2::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider2 {
+  border-color: #3ea7d1;
+}
+
+input:checked + .slider2::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* ========== SWITCH 3 ==========*/
