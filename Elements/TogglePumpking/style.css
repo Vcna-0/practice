@@ -30,6 +30,7 @@
   border-radius: 5rem;
   background: black;
   border: 2px solid #da5f0b;
+  transition: 0.8s;
 }
 
 .pumpking {
@@ -38,8 +39,9 @@
   width: 8rem;
   height: 7rem;
   border-radius: 50%;
-  margin: 0.93rem;
+  margin: 1rem;
   background: #da5f0b;
+  transition: 0.8s;
 }
 
 .eyes {
@@ -57,6 +59,7 @@
   width: 1.5rem;
   border-radius: 50%;
   background: black;
+  transition: 0.8s;
 }
 
 .nose {
@@ -68,6 +71,7 @@
   top: 8px;
   overflow: hidden;
   box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
+  transition: 0.8s;
 }
 
 .nose:after {
@@ -80,6 +84,7 @@
   top: 40px;
   left: 16px;
   box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+  transition: 0.8s;
 }
 
 .mouth {
@@ -89,6 +94,41 @@
   top: 68px;
   left: 19px;
   border-radius: 0 0 30px 30px;
-
   background: black;
+  transition: 0.8s;
+}
+
+.mouth::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 20px;
+  top: -25%;
+  left: 50%;
+  background-color: #000000;
+}
+
+input:checked ~ .pumpking {
+  -webkit-transform: translateX(162px);
+  -ms-transform: translateX(162px);
+  transform: translateX(162px);
+}
+
+input:checked ~ .background {
+  background: #250007;
+}
+
+input:checked ~ .pumpking .eyes .eye,
+input:checked ~ .pumpking .mouth {
+  box-shadow: 0 0 8px 0px #ffff00;
+  background: #ffff00;
+}
+
+input:checked ~ .pumpking .nose {
+  box-shadow: 4px 15px 10px -17px #ffff00;
+}
+
+input:checked ~ .pumpking .nose::after {
+  background: #ffff00;
+  box-shadow: -1px -1px 10px -2px #ffff00;
 }
