@@ -18,6 +18,7 @@
   letter-spacing: 0.2rem;
   font-family: "Eater", cursive;
   color: #250007;
+  transition: 0.9s;
 }
 
 .toggle {
@@ -142,13 +143,15 @@ input:checked ~ .pumpking {
 
 input:checked ~ .background {
   background: #250007;
+  border: 2px solid yellow;
+  box-shadow: 0px 0 20px 0px #da5f0b;
 }
 
 input:checked ~ .pumpking .eyes .eye,
 input:checked ~ .pumpking .mouth {
   /* box-shadow: 1px 0 5px 0px #ffff00, inset -2px 0 2px 0px #aa6a0a; */
   background: #ffff00;
-  box-shadow: inset -6px 0 2px 0px rgb(230, 144, 31);
+  box-shadow: inset -6px 0 2px 0px rgb(115, 65, 34);
 }
 
 input:checked ~ .pumpking .nose {
@@ -157,7 +160,7 @@ input:checked ~ .pumpking .nose {
 
 input:checked ~ .pumpking .nose::after {
   background: #ffff00;
-  box-shadow: inset -2px 2px 2px 0px rgb(230, 144, 31);
+  box-shadow: inset -2px 2px 2px 0px rgb(115, 65, 34);
   /* box-shadow: -1px -1px 5px -2px #ffff00, inset -2px 0 2px 1px #aa6a0a; */
 }
 
@@ -167,6 +170,6 @@ input:checked ~ .pumpking .mouth::before {
   box-shadow: -1px 0 2px 0px #aa6a0a;
 }
 
-input:checked ~ .container .tittle {
+input:checked ~ .tittle {
   color: yellow;
 }
