@@ -36,7 +36,7 @@
 .background {
   position: relative;
   width: 20rem;
-  height: 9rem;
+  height: 8rem;
   border-radius: 5rem;
   background: black;
   border: 2px solid #da5f0b;
@@ -136,9 +136,9 @@
 }
 
 input:checked ~ .pumpking {
-  -webkit-transform: translateX(162px);
-  -ms-transform: translateX(162px);
-  transform: translateX(162px);
+  -webkit-transform: translateX(175px);
+  -ms-transform: translateX(175px);
+  transform: translateX(175px);
 }
 
 input:checked ~ .background {
