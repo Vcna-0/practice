@@ -5,10 +5,19 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 600px;
   background: #250007;
+}
+
+.tittle {
+  margin-top: 50px;
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem;
+  font-family: "Eater", cursive;
+  color: #250007;
 }
 
 .toggle {
@@ -60,6 +69,8 @@
   border-radius: 50%;
   background: black;
   transition: 0.8s;
+  /* box-shadow: inset -2px 0 2px 0px #9c4308; */
+  box-shadow: inset -5px 0 2px 0px #9c4308;
 }
 
 .nose {
@@ -83,7 +94,8 @@
   transform: rotate(45deg);
   top: 40px;
   left: 16px;
-  box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+  /* box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5) */
+  box-shadow: inset -1px 2px 2px 0px #9c4308;
   transition: 0.8s;
 }
 
@@ -95,6 +107,7 @@
   left: 19px;
   border-radius: 0 0 30px 30px;
   background: black;
+  box-shadow: inset -2px 0 2px 0px #9c4308;
   transition: 0.8s;
 }
 
@@ -102,10 +115,23 @@
   content: "";
   position: absolute;
   width: 11px;
-  height: 20px;
-  top: -25%;
-  left: 50%;
-  background-color: #000000;
+  height: 14px;
+  left: 70%;
+  background-color: #da5f0b;
+  box-shadow: -1px 0 1px 0px #9c4308;
+  transition: 0.8s;
+}
+
+.mouth::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 14px;
+  left: 30%;
+  bottom: 0;
+  background-color: #da5f0b;
+  box-shadow: -1px 0 1px 0px #9c4308;
+  transition: 0.8s;
 }
 
 input:checked ~ .pumpking {
@@ -120,8 +146,9 @@ input:checked ~ .background {
 
 input:checked ~ .pumpking .eyes .eye,
 input:checked ~ .pumpking .mouth {
-  box-shadow: 0 0 8px 0px #ffff00;
+  /* box-shadow: 1px 0 5px 0px #ffff00, inset -2px 0 2px 0px #aa6a0a; */
   background: #ffff00;
+  box-shadow: inset -6px 0 2px 0px rgb(230, 144, 31);
 }
 
 input:checked ~ .pumpking .nose {
@@ -130,5 +157,16 @@ input:checked ~ .pumpking .nose {
 
 input:checked ~ .pumpking .nose::after {
   background: #ffff00;
-  box-shadow: -1px -1px 10px -2px #ffff00;
+  box-shadow: inset -2px 2px 2px 0px rgb(230, 144, 31);
+  /* box-shadow: -1px -1px 5px -2px #ffff00, inset -2px 0 2px 1px #aa6a0a; */
+}
+
+input:checked ~ .pumpking .mouth::after,
+input:checked ~ .pumpking .mouth::before {
+  /* background-color: #854216; */
+  box-shadow: -1px 0 2px 0px #aa6a0a;
+}
+
+input:checked ~ .container .tittle {
+  color: yellow;
 }
